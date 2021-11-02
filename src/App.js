@@ -3,10 +3,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Starter</h1>
       <div className="container">
         <div className="generator">
-          <h2 className="generatorHead">Password Generator</h2>
+          <h2 className="generatorHead">Random Password Generator</h2>
           <div className="generatorPass">
             <h3>Password</h3>
             <button className="copyBtn">
@@ -23,7 +22,6 @@ function App() {
               min="10"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="uppercase-letters">Include Uppercase Letters</label>
             <input
@@ -41,7 +39,6 @@ function App() {
               name="lowercase letters"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="include-numbers">Include Numbers</label>
             <input
@@ -59,7 +56,7 @@ function App() {
               name="include-symbols"
             />
           </div>
-          <button className="generator_btn">Generate</button>
+          <button className="generatorBtn">Generate</button>
         </div>
       </div>
     </div>
