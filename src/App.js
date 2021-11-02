@@ -84,7 +84,7 @@ function App() {
             <label htmlFor="include-symbols">Include Symbols</label>
             <input
               // Set the checked value initially to false (no check on box)
-              checked={includeNumbers}
+              checked={includeSymbols}
               // This will update the variable to symbols everytime its checked
               onChange={(e) => setIncludeSymbols(e.target.checked)}
               type="checkbox"
