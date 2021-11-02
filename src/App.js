@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import {
+  numbers,
+  upperCaseLetters,
+  lowerCaseLetters,
+  specialCharacters,
+} from './components/Characters';
 import './App.css';
 
 function App() {
@@ -16,6 +22,31 @@ function App() {
   const [includeLowercase, setIncludeLowercase] = useState(false);
   const [includeNumbers, setIncludeNumbers] = useState(false);
   const [includeSymbols, setIncludeSymbols] = useState(false);
+
+  // HandleGeneratePassword is an event arrow function
+  // Variable characterlist set to empty string
+  // If statement block that will  check if the user has checked any of the optional boxes
+  const handleGeneratePassword = (e) => {
+    let characterList = '';
+
+    if (includeLowercase) {
+      characterList = characterList + lowerCaseLetters;
+    }
+
+    if (includeUppercase) {
+      characterList = characterList + upperCaseLetters;
+    }
+
+    if (includeNumbers) {
+      characterList = characterList + numbers;
+    }
+
+    if (includeSymbols) {
+      characterList = characterList + specialCharacters;
+    }
+
+    setPassword(characterList);
+  };
 
   return (
     <div className="App">
@@ -92,7 +123,9 @@ function App() {
               name="include-symbols"
             />
           </div>
-          <button className="generatorBtn">Generate</button>
+          <button onClick={handleGeneratePassword} className="generatorBtn">
+            Generate Password
+          </button>
         </div>
       </div>
     </div>

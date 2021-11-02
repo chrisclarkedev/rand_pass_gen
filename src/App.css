@@ -52,7 +52,7 @@
 
 .generatorBtn {
   background: yellow;
-  border: none;
+  border-radius: 3px;
   display: block;
   width: 100%;
   padding: 10px;
