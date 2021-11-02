@@ -23,14 +23,18 @@ function App() {
         <div className="generator">
           <h2 className="generatorHead">Random Password Generator</h2>
           <div className="generatorPass">
-            <h3>Password</h3>
+            <h3>{password}</h3>
             <button className="copyBtn">
               <i className="far fa-clipboard"></i>
             </button>
           </div>
           <div className="form-group">
-            <label htmlFor="password-strength">Password Strength</label>
+            <label htmlFor="password-strength">Password length</label>
             <input
+              // Set the default value to passLength which is "20"
+              defaultValue={passLength}
+              //This will update the variable password length everytime you change the values
+              onChange={(e) => setPassLength(e.target.value)}
               type="number"
               id="password-strength"
               name="password-strength"
@@ -41,6 +45,10 @@ function App() {
           <div className="form-group">
             <label htmlFor="uppercase-letters">Include Uppercase Letters</label>
             <input
+              // Set the checked value initially to false (no check on box)
+              checked={includeUppercase}
+              // This will update the variable to uppercase everytime its checked
+              onChange={(e) => setIncludeUppercase(e.target.checked)}
               type="checkbox"
               id="upercase-letters"
               name="upercase-letters"
@@ -50,6 +58,10 @@ function App() {
           <div className="form-group">
             <label htmlFor="lowercase-letters">Include Lowercase Letters</label>
             <input
+              // Set the checked value initially to false (no check on box)
+              checked={includeLowercase}
+              // This will update the variable to lowercase everytime its checked
+              onChange={(e) => setIncludeLowercase(e.target.checked)}
               type="checkbox"
               id="lowercase letters"
               name="lowercase letters"
@@ -58,6 +70,10 @@ function App() {
           <div className="form-group">
             <label htmlFor="include-numbers">Include Numbers</label>
             <input
+              // Set the checked value initially to false (no check on box)
+              checked={includeNumbers}
+              // This will update the variable to numbers everytime its checked
+              onChange={(e) => setIncludeNumbers(e.target.checked)}
               type="checkbox"
               id="include-numbers"
               name="include-numbers"
@@ -67,6 +83,10 @@ function App() {
           <div className="form-group">
             <label htmlFor="include-symbols">Include Symbols</label>
             <input
+              // Set the checked value initially to false (no check on box)
+              checked={includeNumbers}
+              // This will update the variable to symbols everytime its checked
+              onChange={(e) => setIncludeSymbols(e.target.checked)}
               type="checkbox"
               id="include-symbols"
               name="include-symbols"
