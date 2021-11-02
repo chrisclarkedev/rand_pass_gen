@@ -10,7 +10,10 @@
 }
 
 .form-group {
-  padding-bottom: 4px;
+  justify-content: space-between;
+  display: flex;
+  color: white;
+  margin-bottom: 12px;
 }
 
 .generator {
@@ -55,4 +58,6 @@
   padding: 10px;
   padding-top: 10px;
   font-weight: bolder;
+  font-size: 15px;
+  cursor: pointer;
 }

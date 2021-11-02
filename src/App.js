@@ -1,6 +1,21 @@
 import './App.css';
 
 function App() {
+  // Declared Variables
+  // Set password and setPassword into state as an empty string
+  const [password, setPassword] = userState('');
+
+  // Set variable to store password length
+  // Password lengths value is "20"
+  const [passLength, setPassLength] = userState(20);
+
+  // Set variable to keep track of uppercase, lowercase, numbers and symbols
+  // Setting it to false will initialize it as unchecked
+  const [includeUppercase, setIncludeUppercase] = userState(false);
+  const [includeLowercase, setIncludeLowercase] = userState(false);
+  const [includeNumbers, setIncludeNumbers] = userState(false);
+  const [includeSymbols, setIncludeSymbols] = userState(false);
+
   return (
     <div className="App">
       <div className="container">
