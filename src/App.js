@@ -45,7 +45,25 @@ function App() {
       characterList = characterList + specialCharacters;
     }
 
-    setPassword(characterList);
+    setPassword(createPassword(characterList));
+  };
+
+  // Take characterList as an input then add a function to it
+  // Set let password as an empty string
+  // Then check the length of the character list
+  const createPassword = (characterList) => {
+    let password = '';
+    const characterListLength = characterList.length;
+
+    // Look to create an index to generate a random function
+    // This will make sure i is less than the password length
+    // It will round of the random number then multiply it by the characterListLength
+    // Generate a random index that will inturn generate a random character list
+    for (let i = 0; i < passLength; i++) {
+      const characterIndex = Math.round(Math.random() * characterListLength);
+      password = password + characterList.charAt(characterIndex);
+    }
+    return password;
   };
 
   return (
