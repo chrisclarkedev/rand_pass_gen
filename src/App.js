@@ -66,6 +66,21 @@ function App() {
     return password;
   };
 
+  // Function that takes the password that was generated
+  // Selects it copies it and removes it from the the copied area
+  const copyClipboard = () => {
+    const newTextArea = document.createElement('textarea');
+    newTextArea.innerText = password;
+    document.body.appendChild(newTextArea);
+    newTextArea.select();
+    document.execCommand('copy');
+    newTextArea.remove();
+  };
+  // Clipboard effect function
+  const handleCopyPass = (e) => {
+    copyClipboard();
+  };
+
   return (
     <div className="App">
       <div className="container">
@@ -73,7 +88,7 @@ function App() {
           <h2 className="generatorHead">Random Password Generator</h2>
           <div className="generatorPass">
             <h3>{password}</h3>
-            <button className="copyBtn">
+            <button onClick={handleCopyPass} className="copyBtn">
               <i className="far fa-clipboard"></i>
             </button>
           </div>
