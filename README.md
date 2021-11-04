@@ -16,7 +16,7 @@ Random password generator.
 
 User can generate a password depending on the parameter (checkboxes) checked.
 
-Password can be up to 20 characters long.
+User can change password length between 20 (max) - 15 (min) by using dropdown menu.
 
 Password can contain only Uppercase letters, Lowercase Letters, Numbers, Symbols or a combination of them all.
 
